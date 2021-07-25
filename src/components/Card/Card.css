@@ -1,0 +1,12 @@
+.card .nav {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+}
+
+@media all and (max-width: 800px){
+    .nav {
+        justify-content: space-around;
+    }
+
+}
