@@ -1,7 +1,7 @@
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './Home';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from "./components/Hello";
 import {Welcome} from "./components/HookExample";
@@ -12,6 +12,7 @@ import {enthusiasm} from "./reducers";
 import {EnthusiasmAction} from "./actions";
 import createSagaMiddleware from 'redux-saga';
 import {Provider} from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
@@ -27,7 +28,7 @@ console.log('store ', store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
-      <Home />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
