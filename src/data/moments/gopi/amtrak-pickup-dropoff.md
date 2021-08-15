@@ -1,1 +1,1 @@
-amtrak picku and dropoff
+amtrak pickup and dropoff

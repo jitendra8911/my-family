@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import './Card.css'
 
 interface IProps {
     imageFile: any,
@@ -9,8 +10,8 @@ interface IProps {
 
 function Card(props: IProps) {
     return (
-        <div>
-            <div> {props.imageFile && <img src={props.imageFile} alt={props.imageAlt}/>} </div>
+        <div className="card">
+            {props.imageFile && <img src={props.imageFile} alt={props.imageAlt}/>}
             <ReactMarkdown children={props.markdown}/>
         </div>
     )

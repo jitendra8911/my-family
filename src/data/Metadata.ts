@@ -12,7 +12,8 @@ const ammaMoments = [
 
 const gopiMoments = [
     'amtrak-pickup-dropoff',
-    'balaji-temple-raleigh'
+    'balaji-temple-raleigh',
+    'washington-tour'
 ];
 
 const nanaMoments = [
@@ -22,12 +23,16 @@ const nanaMoments = [
     'super-market-diwali-crackers'
 ]
 
-const ammammaMoments = [];
+const ammammaMoments = [
+    'avakayi-pachadi'
+]
+
 const pravasthiMoments: string[] = [];
 
 export const moments: {[key: string]: string[]} = {
     ammaMoments,
     gopiMoments,
     nanaMoments,
+    ammammaMoments,
     pravasthiMoments
 }
