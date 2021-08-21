@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[24],{231:function(a,i,s){"use strict";s.r(i),i.default=s.p+"static/media/nana.0317fd65.md"}}]);
-//# sourceMappingURL=24.8f14500c.chunk.js.map

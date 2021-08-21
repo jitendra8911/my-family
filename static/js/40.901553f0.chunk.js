@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[40],{248:function(a,t,i){"use strict";i.r(t),t.default=i.p+"static/media/scooter-flat-tire-arunachalam.213570fa.md"}}]);
-//# sourceMappingURL=40.901553f0.chunk.js.map

@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[25],{232:function(a,i,s){"use strict";s.r(i),i.default=s.p+"static/media/pravasthi.fd7aece4.md"}}]);
-//# sourceMappingURL=25.a51bbd36.chunk.js.map
