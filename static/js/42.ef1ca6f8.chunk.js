@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[42],{236:function(i,s,a){"use strict";a.r(s),s.default=a.p+"static/media/image_coming_soon.79bfd233.png"}}]);
-//# sourceMappingURL=42.ef1ca6f8.chunk.js.map
