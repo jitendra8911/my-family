@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[1],{28:function(n,t,e){"use strict";e.r(t),e.d(t,"incrementEnthusiasm",(function(){return r})),e.d(t,"decrementEnthusiasm",(function(){return u}));var i=e(15);function r(){return{type:i.INCREMENT_ENTHUSIASM}}function u(){return{type:i.DECREMENT_ENTHUSIASM}}}}]);
-//# sourceMappingURL=1.fe362570.chunk.js.map
