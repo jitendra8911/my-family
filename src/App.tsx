@@ -6,6 +6,7 @@ import Home from "./Home";
 import About from "./components/About/About";
 import {FAMILY} from "./constants/global";
 import './App.css';
+import {Burger, Menu} from './components';
 
 export default function App() {
     const routes = [
@@ -28,50 +29,41 @@ export default function App() {
         },
     ];
     const [personName, setPersonName] = useState('amma');
+    const [view, setView] = useState('about');
+    const [burgerOpen, setBurgerOpen] = useState(false);
 
     return (
-        <div className="home-container">
+        <div className="container">
+            <div>
+                <Burger open={burgerOpen} setOpen={setBurgerOpen}/>
+            </div>
             <BrowserRouter>
-                <div className="sidebar">
-                    <div className="left-nav">
-                        {FAMILY.map((familyMember) => {
-                                const personName = familyMember.toLowerCase();
-                                return (
-                                    <div>
-                                        <NavLink to={{pathname: `/about/${personName}`, state: {personName}}} onClick={() => setPersonName(personName)} activeClassName="selected"
-                                        isActive={(match, location) => {
-                                            console.log('NavLink match ', match);
-                                            console.log('NavLink location ', location);
-                                            if (!location) {
-                                                return false;
-                                            }
-
-                                            // @ts-ignore
-                                            return personName === location.state?.personName;
-                                        }}
-                                        >
-                                            {familyMember}
-                                        </NavLink>
-                                    </div>
-                                )
-                            }
-                        )}
-                    </div>
+                <div className="side-nav">
+                    <Menu setPersonName={setPersonName} personName={personName} open={burgerOpen} setOpen={setBurgerOpen}/>
                 </div>
-                <div className="main">
-                    <div className="content-pane">
-                        <div className="navigation-menu">
-                            <NavLink to={{pathname: `/about/${personName}`, state: {personName}}} activeClassName="selected">About</NavLink>
-                            <NavLink to={{pathname: `/moments/${personName}`, state: {personName}}} activeClassName="selected">Moments</NavLink>
-                        </div>
-                        <div className="content">
-                            <Switch>
-                                {routes.map((route, i) => (
-                                    <RouteWithSubRoutes key={i} {...route} />
-                                ))}
-                            </Switch>
-                        </div>
-                    </div>
+                <div className="top-nav">
+                    <NavLink to={{pathname: `/about/${personName}`, state: {personName}}} onClick={() => setView('about')} activeClassName="selected" isActive={(match, location) => {
+                        console.log('location ', location);
+                        if (location?.pathname === '/' || location?.pathname === '/my-family/home') {
+                            return view === 'about';
+                        }
+
+                        return new RegExp('about').test(location.pathname);
+
+                    }}>About</NavLink>
+                    <NavLink to={{pathname: `/moments/${personName}`, state: {personName}}} onClick={() => setView('moments')} activeClassName="selected" isActive={(match, location) => {
+                        if (location?.pathname === '/' || location?.pathname === '/my-family/home') {
+                            return view === 'moments';
+                        }
+                        return new RegExp('moments').test(location.pathname);
+                    }}>Moments</NavLink>
+                </div>
+                <div className="content">
+                    <Switch>
+                        {routes.map((route, i) => (
+                            <RouteWithSubRoutes key={i} {...route} />
+                        ))}
+                    </Switch>
                 </div>
             </BrowserRouter>
         </div>

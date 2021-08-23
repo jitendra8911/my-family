@@ -26,7 +26,7 @@ function Moments(props: IProps) {
         </Link>
     )
     return (
-        <div className="grid-container">
+        <div className="moments-grid">
             {momentsList}
         </div>
     )

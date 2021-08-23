@@ -5,4 +5,5 @@
     margin: auto;
     display: block;
     padding: 1em;
+    word-wrap: break-word;
 }
