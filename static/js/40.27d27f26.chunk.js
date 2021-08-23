@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[40],{248:function(a,i,s){"use strict";s.r(i),i.default=s.p+"static/media/super-market-diwali-crackers.6fb1d79a.md"}}]);
-//# sourceMappingURL=40.27d27f26.chunk.js.map

@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[36],{244:function(t,i,s){"use strict";s.r(i),i.default=s.p+"static/media/washington-tour.b7c808f8.md"}}]);
-//# sourceMappingURL=36.e8642133.chunk.js.map
