@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[20],{250:function(t,s,a){"use strict";a.r(s),s.default=a.p+"static/media/outer-banks-tour.dee156c5.md"}}]);
-//# sourceMappingURL=20.05e7c567.chunk.js.map
