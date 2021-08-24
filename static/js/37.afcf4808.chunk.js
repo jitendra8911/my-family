@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[37],{262:function(s,i,t){"use strict";t.r(i),i.default=t.p+"static/media/school-flooding-rescue.5d0f0618.md"}}]);
-//# sourceMappingURL=37.afcf4808.chunk.js.map
