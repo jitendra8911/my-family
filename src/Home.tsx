@@ -1,15 +1,8 @@
-import React, {useState} from 'react';
-import './App.css';
-import About from "./components/About/About";
-
-
+import React from 'react';
+import About from './components/About/About';
 
 function Home() {
-  return (
-    <About name='amma'/>
-  );
+  return <About name="amma" />;
 }
-
-
 
 export default Home;
