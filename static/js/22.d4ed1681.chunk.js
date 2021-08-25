@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[22],{253:function(a,t,i){"use strict";i.r(t),t.default=i.p+"static/media/fatehnagar-crow.7a571063.md"}}]);
-//# sourceMappingURL=22.d4ed1681.chunk.js.map
