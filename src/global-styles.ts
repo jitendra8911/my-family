@@ -38,10 +38,18 @@ const GlobalStyles = createGlobalStyle<IProps>`
     .content {
       grid-column: 1 / 4;
     }
+    
+    body {
+      font-size: 1rem;
+    }
   }
 
-  .side-nav > div, .side-nav a, .top-nav a {
-    padding: 2vh 2vw;
+  .side-nav > div, .side-nav a {
+    padding: 2rem;
+  }
+  
+  .top-nav a {
+    padding: 1rem;
   }
 
   .selected {
