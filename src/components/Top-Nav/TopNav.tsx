@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { PATH_PREFIX } from '../../constants/global';
 
 interface IProps {
   personName: string;
@@ -10,7 +11,7 @@ export default function TopNav({ personName, view, setView }: IProps) {
   return (
     <>
       <NavLink
-        to={{ pathname: `/about/${personName}`, state: { personName } }}
+        to={{ pathname: `/${PATH_PREFIX}/about/${personName}`, state: { personName } }}
         onClick={() => setView('about')}
         activeClassName="selected"
         isActive={(match, location) => {
@@ -24,7 +25,7 @@ export default function TopNav({ personName, view, setView }: IProps) {
         About
       </NavLink>
       <NavLink
-        to={{ pathname: `/moments/${personName}`, state: { personName } }}
+        to={{ pathname: `/${PATH_PREFIX}/moments/${personName}`, state: { personName } }}
         onClick={() => setView('moments')}
         activeClassName="selected"
         isActive={(match, location) => {

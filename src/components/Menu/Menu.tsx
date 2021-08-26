@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FAMILY } from '../../constants/global';
+import { FAMILY, PATH_PREFIX } from '../../constants/global';
 import StyledMenu from './Menu.styled';
 
 interface IProps {
@@ -16,7 +16,7 @@ export default function Menu({ setPersonName, personName, open, setOpen }: IProp
         const person = familyMember.toLowerCase();
         return (
           <NavLink
-            to={{ pathname: `/about/${person}`, state: { personName: person } }}
+            to={{ pathname: `/${PATH_PREFIX}/about/${person}`, state: { personName: person } }}
             onClick={() => {
               setPersonName(person);
               setOpen(false);

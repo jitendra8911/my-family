@@ -2,6 +2,7 @@ import About from './components/About/About';
 import Moment from './components/Moments/Moment';
 import Moments from './components/Moments/Moments';
 import Home from './Home';
+import { PATH_PREFIX } from './constants/global';
 
 const routes = [
   {
@@ -23,4 +24,11 @@ const routes = [
   },
 ];
 
-export default routes;
+export default routes.map((route) => {
+  const updatedRoute = {
+    ...route,
+    path: `/${PATH_PREFIX}${route.path}`,
+  };
+
+  return updatedRoute;
+});
