@@ -12,20 +12,31 @@ function Moments(props: IProps) {
   // @ts-ignore
   const personName = location.state ? location.state.personName : props.name.toLowerCase();
   const moments: string[] = dataConfig.moments[`${personName}Moments`];
-  const markDownFilePaths = moments.map((moment) => `${dataConfig.momentsDataPath}/${personName}/${moment}.md`);
-  const imagePath = `${dataConfig.momentsImagesPath}/image_coming_soon.png`;
-  const momentsList = markDownFilePaths.map((markDownFilePath, i) => (
+  const filePaths = moments.map((moment) => {
+    const momentImage = dataConfig.moments[`${personName}MomentsImagesPaths`][moment];
+    return {
+      markDownFilePath: `${dataConfig.momentsDataPath}/${personName}/${moment}.md`,
+      imageFilePath: momentImage
+        ? `${dataConfig.imagesPath}/${personName}/${momentImage}`
+        : `${dataConfig.imagesPath}/${dataConfig.defaultImage}`,
+    };
+  });
+  const momentsList = filePaths.map((filePath, i) => (
     <Link
       to={{
         pathname: `/moments/${personName}/${moments[i]}`,
         state: {
-          imagePath,
+          imagePath: filePath.imageFilePath,
           personName,
-          markDownFilePath,
+          markDownFilePath: filePath.markDownFilePath,
         },
       }}
     >
-      <Preview imagePath={imagePath} personName={personName} markDownFilePath={markDownFilePath} />
+      <Preview
+        imagePath={filePath.imageFilePath}
+        personName={personName}
+        markDownFilePath={filePath.markDownFilePath}
+      />
     </Link>
   ));
   return <div className="moments-grid">{momentsList}</div>;

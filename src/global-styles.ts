@@ -8,9 +8,9 @@ const GlobalStyles = createGlobalStyle<IProps>`
     width: 90%;
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 10% 80% 10%;
-    gap: 5%;
-    top: 5%;
+    grid-template-rows: 100px 1fr;
+    gap: 1rem;
+    top: 1rem;
     position: absolute;
   }
 

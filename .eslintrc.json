@@ -20,6 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "operator-linebreak": "off",
         "object-curly-newline": "off",
         "no-use-before-define": "off",
         "no-unused-vars": "off",

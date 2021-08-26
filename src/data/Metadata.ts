@@ -1,9 +1,10 @@
 export const momentsDataPath = 'data/moments';
 export const aboutDataPath = 'data/about';
-export const momentsImagesPath = 'data/images/moments';
+export const imagesPath = 'data/images/moments';
 export const aboutImagesPath = 'data/images/about';
+export const defaultImage = 'image_coming_soon.png';
 
-const ammaMoments = ['chavithi-garelu-skewers', 'chicago-trip', 'fatehnagar-crow', 'outer-banks-tour'];
+const ammaMoments = ['chavithi-garelu-skewers', 'chicago-trip', 'fatehnagar-crow', 'outer-banks-tour', 'us-tour'];
 
 const gopiMoments = ['amtrak-pickup-dropoff', 'balaji-temple-raleigh', 'washington-tour'];
 
@@ -14,14 +15,29 @@ const nanaMoments = [
   'super-market-diwali-crackers',
 ];
 
+const ammaMomentsImagesPaths = {
+  'chicago-trip': 'chicago-trip.JPG',
+  'chavithi-garelu-skewers': 'chavithi-garelu-skewers.JPG',
+  'outer-banks-tour': 'outer-banks-tour.JPG',
+  'us-tour': 'us-tour.png',
+};
+const nanaMomentsImagesPaths = {};
+const gopiMomentsImagesPaths = {};
+const ammammaMomentsImagesPaths = {};
+const pravasthiMomentsImagesPaths = {};
 const ammammaMoments = ['avakayi-pachadi'];
 
 const pravasthiMoments: string[] = [];
 
-export const moments: { [key: string]: string[] } = {
+export const moments: { [key: string]: any } = {
   ammaMoments,
   gopiMoments,
   nanaMoments,
   ammammaMoments,
   pravasthiMoments,
+  ammaMomentsImagesPaths,
+  nanaMomentsImagesPaths,
+  gopiMomentsImagesPaths,
+  ammammaMomentsImagesPaths,
+  pravasthiMomentsImagesPaths,
 };
