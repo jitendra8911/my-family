@@ -1,91 +1,60 @@
-import React, {useState} from 'react';
-import Moment from "./components/Moments/Moment";
-import Moments from "./components/Moments/Moments";
-import {BrowserRouter, Link, Route, Switch, useParams, NavLink} from "react-router-dom";
-import Home from "./Home";
-import About from "./components/About/About";
-import {FAMILY} from "./constants/global";
-import './App.css';
+import React, { useRef, useState } from 'react';
+import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { Burger, Menu } from './components';
+import theme from './theme';
+import GlobalStyles from './global-styles';
+import routes from './routes';
+import TopNav from './components/Top-Nav';
+import { useOnClickOutside } from './custom-hooks';
 
-export default function App() {
-    const routes = [
-        {
-            path: '/about/:personId',
-            component: About
-        },
-
-        {
-            path: "/moments/:personId/:momentId",
-            component: Moment
-        },
-        {
-            path: '/moments/:personId',
-            component: Moments
-        },
-        {
-            path: '/',
-            component: Home
-        },
-    ];
-    const [personName, setPersonName] = useState('amma');
-
-    return (
-        <div className="home-container">
-            <BrowserRouter>
-                <div className="sidebar">
-                    <div className="left-nav">
-                        {FAMILY.map((familyMember) => {
-                                const personName = familyMember.toLowerCase();
-                                return (
-                                    <div>
-                                        <NavLink to={{pathname: `/about/${personName}`, state: {personName}}} onClick={() => setPersonName(personName)} activeClassName="selected"
-                                        isActive={(match, location) => {
-                                            console.log('NavLink match ', match);
-                                            console.log('NavLink location ', location);
-                                            if (!location) {
-                                                return false;
-                                            }
-
-                                            // @ts-ignore
-                                            return personName === location.state?.personName;
-                                        }}
-                                        >
-                                            {familyMember}
-                                        </NavLink>
-                                    </div>
-                                )
-                            }
-                        )}
-                    </div>
-                </div>
-                <div className="main">
-                    <div className="content-pane">
-                        <div className="navigation-menu">
-                            <NavLink to={{pathname: `/about/${personName}`, state: {personName}}} activeClassName="selected">About</NavLink>
-                            <NavLink to={{pathname: `/moments/${personName}`, state: {personName}}} activeClassName="selected">Moments</NavLink>
-                        </div>
-                        <div className="content">
-                            <Switch>
-                                {routes.map((route, i) => (
-                                    <RouteWithSubRoutes key={i} {...route} />
-                                ))}
-                            </Switch>
-                        </div>
-                    </div>
-                </div>
-            </BrowserRouter>
-        </div>
-
-    )
+interface IPropsRouteWithSubRoutes {
+  path: string;
+  component: any;
 }
 
-function RouteWithSubRoutes(route: any) {
-    return (
-        <Route
-            path={route.path}
-            render={props => (
-                <route.component {...props} routes={route.routes} />
-            )}
-        />
-    )
+function RouteWithSubRoutes({ path, component: Component }: IPropsRouteWithSubRoutes) {
+  return (
+    <Route
+      path={path}
+      render={(props) => (
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        <Component {...props} />
+      )}
+    />
+  );
+}
+export default function App() {
+  const [personName, setPersonName] = useState('amma');
+  const [view, setView] = useState('about');
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  const node = useRef(null);
+  useOnClickOutside(node, () => setBurgerOpen(false));
+
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <div className="container">
+          <BrowserRouter>
+            <div className="side-nav" ref={node}>
+              <Burger open={burgerOpen} setOpen={setBurgerOpen} />
+              <Menu setPersonName={setPersonName} personName={personName} open={burgerOpen} setOpen={setBurgerOpen} />
+            </div>
+            <div className="top-nav">
+              <TopNav personName={personName} view={view} setView={setView} />
+            </div>
+            <div className="content">
+              <Switch>
+                {routes.map((route, i) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <RouteWithSubRoutes key={i} path={route.path} component={route.component} />
+                ))}
+              </Switch>
+            </div>
+          </BrowserRouter>
+        </div>
+      </>
+    </ThemeProvider>
+  );
 }

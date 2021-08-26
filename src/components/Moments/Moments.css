@@ -1,5 +1,14 @@
-.grid-container {
+.moments-grid {
     display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
-    grid-gap: 1rem;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-auto-rows: auto;
+    margin: 5%;
+    padding: 5%;
 }
+
+@media (max-width: 576px) {
+    .moments-grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+

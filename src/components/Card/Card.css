@@ -1,8 +1,8 @@
-
 .card > * {
     width: 70%;
     height: auto;
     margin: auto;
     display: block;
     padding: 1em;
+    word-wrap: break-word;
 }
