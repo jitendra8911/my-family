@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import * as dataConfig from '../../data/Metadata';
 import './Moments.css';
 import Preview from '../Preview/Preview';
+import { PATH_PREFIX } from '../../constants/global';
 
 interface IProps {
   name: string;
@@ -24,7 +25,7 @@ function Moments(props: IProps) {
   const momentsList = filePaths.map((filePath, i) => (
     <Link
       to={{
-        pathname: `/moments/${personName}/${moments[i]}`,
+        pathname: `/${PATH_PREFIX}/moments/${personName}/${moments[i]}`,
         state: {
           imagePath: filePath.imageFilePath,
           personName,
