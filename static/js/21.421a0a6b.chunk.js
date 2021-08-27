@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[21],{252:function(i,t,a){"use strict";a.r(t),t.default=a.p+"static/media/chicago-trip.603d6189.md"}}]);
-//# sourceMappingURL=21.421a0a6b.chunk.js.map

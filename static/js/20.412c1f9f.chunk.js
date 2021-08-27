@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[20],{251:function(i,s,a){"use strict";a.r(s),s.default=a.p+"static/media/chavithi-garelu-skewers.4b00b2b3.md"}}]);
-//# sourceMappingURL=20.412c1f9f.chunk.js.map
