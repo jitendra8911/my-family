@@ -20,6 +20,7 @@ const ammaMomentsImagesPaths = {
   'chavithi-garelu-skewers': 'chavithi-garelu-skewers.JPG',
   'outer-banks-tour': 'outer-banks-tour.JPG',
   'us-tour': 'us-tour.png',
+  'fatehnagar-crow': 'fatehnagar-crow-incident.jpg',
 };
 const nanaMomentsImagesPaths = {};
 const gopiMomentsImagesPaths = {};
