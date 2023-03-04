@@ -26,9 +26,11 @@ const nanaMomentsImagesPaths = {};
 const gopiMomentsImagesPaths = {};
 const ammammaMomentsImagesPaths = {};
 const pravasthiMomentsImagesPaths = {};
+const thathayyaMomentsImagesPaths = {};
 const ammammaMoments = ['avakayi-pachadi'];
 
 const pravasthiMoments: string[] = [];
+const thathayyaMoments: string[] = ['rolling-jute-thread'];
 
 export const moments: { [key: string]: any } = {
   ammaMoments,
@@ -36,9 +38,11 @@ export const moments: { [key: string]: any } = {
   nanaMoments,
   ammammaMoments,
   pravasthiMoments,
+  thathayyaMoments,
   ammaMomentsImagesPaths,
   nanaMomentsImagesPaths,
   gopiMomentsImagesPaths,
   ammammaMomentsImagesPaths,
   pravasthiMomentsImagesPaths,
+  thathayyaMomentsImagesPaths,
 };
