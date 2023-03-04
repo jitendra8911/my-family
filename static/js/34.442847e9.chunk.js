@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[34],{250:function(s,t,a){"use strict";a.r(t),t.default=a.p+"static/media/us-tour.67e256a6.png"}}]);
-//# sourceMappingURL=34.442847e9.chunk.js.map

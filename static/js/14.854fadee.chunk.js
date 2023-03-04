@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[14],{243:function(a,i,s){"use strict";s.r(i),i.default=s.p+"static/media/gopi.9a0ad1e1.JPG"}}]);
-//# sourceMappingURL=14.854fadee.chunk.js.map
