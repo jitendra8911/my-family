@@ -4,14 +4,16 @@ import * as dataConfig from '../../data/Metadata';
 import './Moments.css';
 import Preview from '../Preview/Preview';
 import { PATH_PREFIX } from '../../constants/global';
+import usePersonNameFromPath from '../../custom-hooks/usePersonNameFromPath';
 
 interface IProps {
   name: string;
 }
 function Moments(props: IProps) {
   const location = useLocation();
+  const personNameFromPath = usePersonNameFromPath();
   // @ts-ignore
-  const personName = location.state ? location.state.personName : props.name.toLowerCase();
+  const personName = personNameFromPath || (location.state ? location.state.personName : props.name.toLowerCase());
   const moments: string[] = dataConfig.moments[`${personName}Moments`];
   const filePaths = moments.map((moment) => {
     const momentImage = dataConfig.moments[`${personName}MomentsImagesPaths`][moment];
