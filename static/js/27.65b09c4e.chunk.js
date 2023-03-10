@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[27],{261:function(a,i,s){"use strict";s.r(i),i.default=s.p+"static/media/avakayi-pachadi.9fdab04b.md"}}]);
+//# sourceMappingURL=27.65b09c4e.chunk.js.map

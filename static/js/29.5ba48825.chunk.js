@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[29],{261:function(a,e,i){"use strict";i.r(e),e.default=i.p+"static/media/balaji-temple-raleigh.cef6eb48.md"}}]);
-//# sourceMappingURL=29.5ba48825.chunk.js.map

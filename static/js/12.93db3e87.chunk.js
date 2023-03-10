@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[12],{243:function(a,t,i){"use strict";i.r(t),t.default=i.p+"static/media/thathayya.0a2b3876.md"}}]);
+//# sourceMappingURL=12.93db3e87.chunk.js.map

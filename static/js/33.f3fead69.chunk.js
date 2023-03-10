@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-family"]=this["webpackJsonpmy-family"]||[]).push([[33],{267:function(e,s,t){"use strict";t.r(s),s.default=t.p+"static/media/super-market-chocolate-groceries.71412559.md"}}]);
+//# sourceMappingURL=33.f3fead69.chunk.js.map
