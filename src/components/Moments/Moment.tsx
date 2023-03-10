@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useRouteMatch } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Card from '../Card/Card';
 import useDataFetcher from '../../custom-hooks/useDataFetcher';
 import { MORE } from '../../constants/global';

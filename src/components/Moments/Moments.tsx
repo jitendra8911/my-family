@@ -4,7 +4,6 @@ import * as dataConfig from '../../data/Metadata';
 import './Moments.css';
 import Preview from '../Preview/Preview';
 import { PATH_PREFIX } from '../../constants/global';
-import usePersonNameFromPath from '../../custom-hooks/usePersonNameFromPath';
 
 interface IProps {
   name: string;
