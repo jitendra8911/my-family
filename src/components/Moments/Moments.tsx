@@ -11,9 +11,8 @@ interface IProps {
 }
 function Moments(props: IProps) {
   const location = useLocation();
-  const personNameFromPath = usePersonNameFromPath();
   // @ts-ignore
-  const personName = personNameFromPath || (location.state ? location.state.personName : props.name.toLowerCase());
+  const personName = location.state ? location.state.personName : props.name.toLowerCase();
   const moments: string[] = dataConfig.moments[`${personName}Moments`];
   const filePaths = moments.map((moment) => {
     const momentImage = dataConfig.moments[`${personName}MomentsImagesPaths`][moment];
