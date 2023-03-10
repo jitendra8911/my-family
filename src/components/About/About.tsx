@@ -10,8 +10,9 @@ interface IProps {
 }
 function About(props: IProps) {
   const location = useLocation();
+  const personNameFromPath = usePersonNameFromPath();
   // @ts-ignore
-  const personName = location.state ? location.state.personName : props.name;
+  const personName = personNameFromPath || (location.state ? location.state.personName : props.name);
   const markDownFilePath = `${dataConfig.aboutDataPath}/${personName}/${personName}.md`;
   const imagePath = `${dataConfig.aboutImagesPath}/${personName}.JPG`;
   const [md, imageFile] = useDataFetcher(imagePath, markDownFilePath);
