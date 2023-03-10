@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Card from '../Card/Card';
 import useDataFetcher from '../../custom-hooks/useDataFetcher';
 import * as dataConfig from '../../data/Metadata';
+import usePersonNameFromPath from '../../custom-hooks/usePersonNameFromPath';
 
 interface IProps {
   name: string;
